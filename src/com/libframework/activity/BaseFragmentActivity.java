@@ -7,7 +7,8 @@ import android.util.Log;
 
 import com.libframework.annotation.ViewUtils;
 
-public abstract class BaseFragmentActivity extends FragmentActivity implements IBroadcastRegister, IActivity {
+public abstract class BaseFragmentActivity extends FragmentActivity
+		implements IBroadcastRegister, IActivity {
 
 	public enum ActivityState { RUNNING, PAUSED, STOPED, DESTROYED }
 	public enum LogState { NONE, I, D, W, E }
@@ -89,9 +90,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements I
 		
 		if (!fragment.isAdded()) {
 			getSupportFragmentManager()
-			.beginTransaction()
-			.add(containerViewId, fragment, tag)
-			.commit();
+				.beginTransaction()
+				.add(containerViewId, fragment, tag)
+				.commit();
 			
 			mCurrFragment = fragment;
 		}
@@ -128,9 +129,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements I
 		}
 
 		getSupportFragmentManager()
-		.beginTransaction()
-		.replace(containerViewId, fragment, tag)
-		.commit();
+			.beginTransaction()
+			.replace(containerViewId, fragment, tag)
+			.commit();
 	}
 	
 	protected void initFragment(Bundle savedInstanceState) {}

@@ -6,7 +6,8 @@ import android.util.Log;
 
 import com.libframework.annotation.ViewUtils;
 
-public abstract class BaseActivity extends Activity implements IBroadcastRegister, IActivity {
+public abstract class BaseActivity extends Activity implements
+		IBroadcastRegister, IActivity {
 
 	public enum ActivityState { RUNNING, PAUSED, STOPED, DESTROYED }
 	public enum LogState { NONE, I, D, W, E }
